@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Inter:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap");
+
+:root {
+  --leaf: #315928;
+  --mist: #f7fbff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  color: var(--mist);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.comingSoon {
+  height: 100svh;
+  max-height: 100svh;
+  min-height: 100svh;
+  overflow: hidden;
+  position: relative;
+}
+
+.backgroundImage {
+  object-fit: cover;
+  object-position: center center;
+  z-index: 0;
+}
+
+.shade {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.42),
+      rgba(12, 24, 34, 0.18) 46%,
+      rgba(0, 0, 0, 0.48)
+    ),
+    rgba(8, 14, 16, 0.22);
+  inset: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.content {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  height: 100svh;
+  justify-content: space-between;
+  padding-bottom: clamp(28px, 3.6vw, 58px);
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+  width: min(50vw, 920px);
+  z-index: 2;
+}
+
+.logo {
+  align-self: flex-end;
+  animation: riseIn 700ms ease-out 120ms both;
+  background: rgba(255, 255, 255, 0.96);
+  height: clamp(180px, 14vw, 286px);
+  /* margin-top: clamp(14px, 2vw, 24px); */
+
+  margin-right: clamp(22px, 3vw, 58px);
+  object-fit: contain;
+  padding: clamp(4px, 0.45vw, 9px);
+  width: clamp(230px, 17.2vw, 360px);
+}
+
+.launchBlock {
+  align-items: flex-end;
+  animation: riseIn 760ms ease-out 360ms both;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+h1 {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-family: Aboreto, "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(2.6rem, 4vw, 5rem);
+  font-style: normal;
+  font-weight: 400;
+  gap: 0.18em;
+  letter-spacing: 0;
+  leading-trim: none;
+  line-height: 1.08;
+  margin: 0 clamp(16px, 1.5vw, 28px) 16px 0;
+  max-width: 100%;
+  text-align: right;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+h1 span {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: normal;
+  white-space: nowrap;
+}
+
+.rule {
+  align-self: flex-end;
+  background: rgba(255, 255, 255, 0.86);
+  height: 4px;
+  margin: 0 clamp(16px, 1.5vw, 28px) clamp(24px, 2.2vw, 34px) 0;
+  width: calc(100% - clamp(16px, 1.5vw, 28px));
+}
+
+.countdown {
+  background: rgba(43, 79, 36, 0.74);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  min-height: clamp(136px, 8.4vw, 168px);
+  width: min(62%, 760px);
+}
+
+.countdownItem {
+  align-items: center;
+  animation: riseIn 640ms ease-out both;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 16px 16px 18px;
+}
+
+.countdownItem:nth-child(1) {
+  animation-delay: 620ms;
+}
+
+.countdownItem:nth-child(2) {
+  animation-delay: 760ms;
+}
+
+.countdownItem:nth-child(3) {
+  animation-delay: 900ms;
+}
+
+.countdownValue {
+  color: #ffffff;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: clamp(3.4rem, 4.55vw, 5.45rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.countdownLabel {
+  color: rgba(255, 255, 255, 0.92);
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: clamp(1.02rem, 1.18vw, 1.5rem);
+  font-weight: 300;
+  letter-spacing: 0;
+  margin-top: 0.55em;
+}
+
+.socialLinks {
+  align-items: center;
+  animation: riseIn 680ms ease-out 1180ms both;
+  bottom: clamp(22px, 3vw, 42px);
+  display: flex;
+  gap: clamp(18px, 2.3vw, 34px);
+  left: clamp(26px, 3vw, 54px);
+  position: absolute;
+  z-index: 2;
+}
+
+.socialLinks a {
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  display: inline-flex;
+  height: 46px;
+  justify-content: center;
+  text-decoration: none;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+  width: 46px;
+}
+
+.socialLinks a:hover,
+.socialLinks a:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+}
+
+.socialIcon {
+  fill: #ffffff;
+  height: 24px;
+  width: 24px;
+}
+
+.reservation {
+  animation: riseIn 720ms ease-out 1080ms both;
+  color: #ffffff;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: clamp(1.06rem, 1.18vw, 1.42rem);
+  line-height: 1.32;
+  max-width: 100%;
+  padding-right: clamp(28px, 3.4vw, 66px);
+  text-align: right;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.56);
+  width: 100%;
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+.reservation strong,
+.reservation .phoneLine,
+.reservation a[href^="mailto"] {
+  display: block;
+}
+
+.reservation strong {
+  font-size: clamp(1.24rem, 1.45vw, 1.72rem);
+  margin-bottom: 0.32em;
+}
+
+.reservation a {
+  text-decoration: none;
+}
+
+.reservation a:hover,
+.reservation a:focus-visible {
+  text-decoration: underline;
+}
+
+@media (max-width: 1100px) {
+  .content {
+    right: 0;
+    width: min(58vw, 680px);
+  }
+
+  h1 {
+    font-size: clamp(2.1rem, 4.7vw, 3.35rem);
+    margin-top: 0;
+  }
+
+  .reservation {
+    font-size: clamp(0.95rem, 2vw, 1.2rem);
+  }
+}
+
+@media (max-width: 760px) {
+  .comingSoon {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100svh;
+    padding: 0 18px 104px;
+  }
+
+  .backgroundImage {
+    object-position: 28% center;
+  }
+
+  .shade {
+    background:
+      linear-gradient(0deg, rgba(6, 12, 10, 0.74), rgba(6, 12, 10, 0.38)),
+      rgba(8, 14, 16, 0.42);
+  }
+
+  .content {
+    align-items: center;
+    height: calc(100svh - 104px);
+    justify-content: flex-start;
+    padding-bottom: 18px;
+    position: relative;
+    right: auto;
+    text-align: center;
+    top: auto;
+    width: min(100%, 560px);
+  }
+
+  .logo {
+    align-self: center;
+    height: 150px;
+    margin-top: 0;
+    margin-right: 0;
+    padding: 6px;
+    width: 220px;
+  }
+
+  .launchBlock {
+    align-items: center;
+  }
+
+  h1 {
+    font-size: clamp(1.95rem, 9vw, 3rem);
+    margin: 30px 0 16px;
+    text-align: center;
+  }
+
+  h1 span {
+    white-space: normal;
+  }
+
+  .rule {
+    align-self: center;
+    height: 3px;
+    margin: 0 0 26px;
+    width: 100%;
+  }
+
+  .countdown {
+    min-height: 112px;
+    width: 100%;
+  }
+
+  .countdownItem {
+    padding: 16px 8px;
+  }
+
+  .countdownValue {
+    font-size: clamp(2.35rem, 13vw, 4rem);
+  }
+
+  .countdownLabel {
+    font-size: 0.98rem;
+  }
+
+  .socialLinks {
+    bottom: 22px;
+    left: 18px;
+  }
+
+  .socialLinks a {
+    height: 42px;
+    width: 42px;
+  }
+
+  .reservation {
+    font-size: 0.92rem;
+    line-height: 1.35;
+    margin-top: auto;
+    max-width: 100%;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .reservation strong {
+    font-size: 1rem;
+    margin-bottom: 0.3em;
+  }
+}
