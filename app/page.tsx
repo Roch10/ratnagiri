@@ -47,7 +47,7 @@ export default function Home() {
           </h1>
           <div className="rule" />
 
-          <Countdown targetDate="2026-08-01T00:00:00+05:45" />
+          <Countdown targetDate="2026-07-17T00:00:00+05:45" />
         </div>
 
         <address className="reservation">
