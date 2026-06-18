@@ -17,6 +17,14 @@ function InstagramIcon() {
   );
 }
 
+function WhatsAppIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="whatsappIcon">
+      <path d="M12.04 2C6.57 2 2.12 6.4 2.12 11.82c0 1.9.56 3.74 1.61 5.31L2 22l5.06-1.61a10 10 0 0 0 4.98 1.28c5.47 0 9.92-4.41 9.92-9.83C21.96 6.4 17.51 2 12.04 2Zm0 17.87a8.15 8.15 0 0 1-4.35-1.24l-.31-.18-3 .96.98-2.87-.2-.31a7.86 7.86 0 0 1-1.26-4.41c0-4.43 3.65-8.04 8.14-8.04s8.14 3.61 8.14 8.04-3.65 8.05-8.14 8.05Zm4.46-6.02c-.24-.12-1.44-.7-1.66-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.77.94-.14.16-.28.18-.52.06-.24-.12-1.03-.37-1.96-1.19-.72-.64-1.21-1.43-1.35-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.29-.74-1.77-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 1.99 0 1.17.86 2.31.98 2.47.12.16 1.69 2.56 4.11 3.59.57.24 1.02.39 1.37.5.58.18 1.1.16 1.51.1.46-.07 1.44-.58 1.64-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z" />
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <main className="comingSoon">
@@ -50,37 +58,52 @@ export default function Home() {
           <Countdown targetDate="2026-07-17T00:00:00+05:45" />
         </div>
 
-        <address className="reservation">
+      </section>
+
+      <div className="contactBar">
+        <nav className="socialLinks" aria-label="Social media">
+          <a
+            href="https://www.facebook.com/ratnagiriresort"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Ratnagiri Resort on Facebook"
+          >
+            <FacebookIcon />
+          </a>
+          <a
+            href="https://www.instagram.com/ratnagiriresortpvt.ltd/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Ratnagiri Resort on Instagram"
+          >
+            <InstagramIcon />
+          </a>
+        </nav>
+
+        <address className="reservationText">
           <strong>For Reservation:</strong>
           <span className="phoneLine">
             <a href="tel:+9779823443684">+977-9823443684</a>
             <span>, </span>
             <a href="tel:015145007">01-5145007</a>
             <span>, </span>
-            <a href="tel:015145009">01-5145009</a>
+            <a href="tel:5145009">5145009</a>
           </span>
-          <a href="mailto:ratnagirinepal@gmail.com">ratnagirinepal@gmail.com</a>
+          <a href="mailto:ratnagirinepal@gmail.com">
+            ratnagirinepal@gmail.com
+          </a>
         </address>
-      </section>
 
-      <nav className="socialLinks" aria-label="Social media">
         <a
-          href="https://www.facebook.com/ratnagiriresort"
+          href="https://wa.me/9779823443684"
           target="_blank"
           rel="noreferrer"
-          aria-label="Ratnagiri Resort on Facebook"
+          className="whatsappLink"
+          aria-label="Chat with Ratnagiri Resort on WhatsApp"
         >
-          <FacebookIcon />
+          <WhatsAppIcon />
         </a>
-        <a
-          href="https://www.instagram.com/ratnagiriresortpvt.ltd/"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Ratnagiri Resort on Instagram"
-        >
-          <InstagramIcon />
-        </a>
-      </nav>
+      </div>
     </main>
   );
 }
